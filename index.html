@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vertical Menu with Hover Effects</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #ca4747;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu li {
+        position: relative;
+        font-size: 1.5rem;
+    }
+
+    .menu a {
+        text-decoration: none;
+        color: #bf2a6f;
+        display: block;
+        padding: 10px 20px;
+        background-color: #fff;
+        border: 2px solid #ddd;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .menu a:hover {
+        color: #fff;
+        background-color: #e094ad;
+        border-color: #5e0b18;
+    }
+
+    .menu a::before,
+    .menu a::after {
+        content: '';
+        position: absolute;
+        background-color: #7d127f;
+        transition: all 0.4s ease;
+    }
+
+    .menu a::before {
+        height: 5px;
+        width: 0;
+        top: 0;
+        left: 0;
+    }
+
+    .menu a::after {
+        height: 0;
+        width: 5px;
+        bottom: 0;
+        right: 0;
+    }
+
+    .menu a:hover::before {
+        width: 100%;
+    }
+
+    .menu a:hover::after {
+        height: 100%;
+    }
+</style>
+</head>
+<body>
+
+<ul class="menu">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contacts">Contacts</a></li>
+    <li><a href="#faq">FAQ</a></li>
+</ul>
+
+</body>
+</html>
